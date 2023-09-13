@@ -74,6 +74,7 @@ button:hover{
 @media (max-width:466px) {
   .app-container {
     max-width: 350px;
+    margin: auto;
 
 }
 .advice-container {
