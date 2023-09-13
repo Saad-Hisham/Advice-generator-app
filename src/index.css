@@ -7,7 +7,89 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body {
+  background-color: #202632;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 541px;
+  background: #313a49;
+  border-radius: 1rem;
+  min-height: 323px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.id-container {
+  text-align: center;
+  color: #53ffab;
+  LETTER-SPACING: 4px;
+}
+
+.advice-container {
+  color: #d0e3ea;
+  max-width: 414px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 24px auto;
+}
+.dvider {
+  margin-top: 1rem;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+button {
+  background: #53ffab;
+  border-radius: 50%;
+  border: none;
+  min-width: 66px;
+  height: 66px;
+  position: absolute;
+  top: 18rem;
+  cursor: pointer;
+}
+button:hover{
+  box-shadow: -3px -1px 59px -1px rgba(83,255,171,1);
+-webkit-box-shadow: -3px -1px 59px -1px rgba(83,255,171,1);
+-moz-box-shadow: -3px -1px 59px -1px rgba(83,255,171,1);
+}
+@media (max-width:466px) {
+  .app-container {
+    max-width: 350px;
+
+}
+.advice-container {
+  max-width: 305px;
+  font-size: 1rem;
+}
+.dvider {
+  width: 100%;
+}
+.dvider img {
+  width: 100%;
+}
+}
+footer {
+  margin-top: 6rem;
+}
+a{
+  color: white;
 }
