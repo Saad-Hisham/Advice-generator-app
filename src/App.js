@@ -12,12 +12,14 @@ function App() {
   const fetchAdvice = useCallback(async () => {
     try {
       const response =  fetch('https://api.adviceslip.com/advice', { method: 'GET', mode: 'cors', cache: 'no-cache' });
-      const adviceText = response.data.slip;
+       console.log(response)
+      // const adviceText = response.data.slip;
       setAdvice(adviceText);
     } catch (error) {
       console.log('Error fetching advice:', error);
     }
   }, []);
+ 
 
   return (
     <div className="App">
