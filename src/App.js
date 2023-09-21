@@ -11,10 +11,20 @@ function App() {
 
   const fetchAdvice = useCallback(async () => {
     try {
-      const response =  fetch('https://api.adviceslip.com/advice', { method: 'GET', mode: 'cors', cache: 'no-cache' });
-       console.log(response)
-      // const adviceText = response.data.slip;
-      setAdvice(adviceText);
+      const response = await fetch('https://api.adviceslip.com/advice', { 
+        method: 'GET', 
+        mode: 'cors', 
+        cache: 'no-cache' 
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        const adviceText = data.slip;
+        setAdvice(adviceText);
+        
+      } else {
+        throw new Error('Request failed');
+      }
     } catch (error) {
       console.log('Error fetching advice:', error);
     }
