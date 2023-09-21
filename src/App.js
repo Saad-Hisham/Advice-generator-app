@@ -10,9 +10,9 @@ function App() {
   const fetchAdvice = useCallback(async () => {
     try {
       const response = await axios.get('https://api.adviceslip.com/advice', { 
-  method: 'GET', 
-  mode: 'cors', 
-  cache: 'no-cache' 
+      method: 'GET', 
+      mode: 'cors', 
+      cache: 'no-cache' 
 })
       const adviceText = response.data.slip;
       setAdvice(adviceText);
